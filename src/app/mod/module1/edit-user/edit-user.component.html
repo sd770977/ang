@@ -1,0 +1,44 @@
+<div>
+   <div class="box" fxLayoutAlign="space-between">
+    <div class="item">
+        Name       : <input type="text" name="firstName"  [(ngModel)]="users.firstName">
+    </div>
+    <div class="item">
+        LastName   : <input type="text" name="surName"  [(ngModel)]="users.surName">
+    </div>
+    <div class="item">
+        Age        : <input type="text" name="age" [(ngModel)]="users.age"><br><br>
+    </div>
+    <div class="item">
+        Email      : <input type="email" name="email" [(ngModel)]="users.email"><br><br>
+    </div>
+</div>
+<br>
+<div class="box" fxLayoutAlign="space-between">
+    <div class="item">
+        Occupation : <input type="text" name="occupation" [(ngModel)]="users.occupation"><br><br>
+    </div>
+    <div class="item">
+        Pincode    : <input type="text" name="pincode" [(ngModel)]="users.pincode"><br><br>
+    </div>
+    <div class="item">
+        City       : <input type="text" name="city" [(ngModel)]="users.city"><br><br>
+    </div>
+    <div class="item">
+        State      : <input type="text" name="state" [(ngModel)]="users.state"><br><br>
+    </div>
+</div>
+<hr>
+<div class="box" fxLayoutAlign="space-between">
+    <div class="item">
+        Country    : <input type="text" name="country" [(ngModel)]="users.country"><br><br>
+    </div>
+    <div class="item">
+        Dob        : <input type="date" name="dob"  [(ngModel)]="users.dob"><br><br>
+    </div>
+    <div class="item">
+        Doj        : <input type="date" name="doj" [(ngModel)]="users.doj"><br><br>
+    </div>
+</div>
+<input type="submit" value="Update" (click)="onUpdate(id)">
+</div>

@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <div class="row" *ngIf='showDivOne'>
+    </div>
+    <div class="row justify-content-md-center" style="background-color:darkseagreen;">
+      <div class="col-sm-4">
+        <button (click)="fetchDob()">Fetch Data By Date Of Birth</button>
+    </div>
+    <div class="col-sm-4">
+        <button (click)="reg()">Register</button>
+    </div> 
+    <div class="col-sm-4">
+        <input [(ngModel)]="idname" placeholder="enter id here">
+        <button (click)="edit(idname)">Edit</button>
+    </div> 
+    <div class="col-sm-4">
+        <input [(ngModel)]="idname1" placeholder="enter id here">
+        <button (click)="hardRemove(idname1)">Hard Remove</button>
+    </div>
+    <div class="col-sm-4">
+        <input [(ngModel)]="idname2" placeholder="enter id here">
+        <button (click)="softRemove(idname2)">Soft Remove</button>
+    </div> 
+    <div class="col-sm-4">
+        <button (click)="fetchDoj()">Fetch Data By Date Of join</button>
+    </div> 
+    <div class="col-sm-4">
+        <input [(ngModel)]="idname3" placeholder="enter id here">
+        <button (click)="fetchId(idname3)">Fetch Data By Id</button>
+    </div> 
+    <div class="col-sm-4">
+        <button (click)="getAllUser()">GetAllUser</button>
+    </div> 
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+</div>
+
+<div *ngIf='showDivTwo'>
+    <div style="float:center">
+        <h1>Record Details!!!</h1>
+   <table border = "5">
+       <tr>
+       <th>ID</th>
+       <th>Name</th>
+       <th>LastName</th>
+       <th>Age</th>
+       <th>Email</th>
+       <th>Occupation</th>
+       <th>pincode</th>
+       <th>city</th>
+       <th>state</th>
+       <th>country</th>
+       <th>dob</th>
+       <th>doj</th>
+       <th>EDIT</th>
+       <th>DELETE</th>
+       </tr>
+        <tr *ngFor = 'let e of users'>
+       <td>{{e.userId}}</td>
+       <td>{{e.firstName}}</td>
+       <td>{{e.surName}}</td>
+       <td>{{e.age}}</td>
+       <td>{{e.email}}</td>
+       <td>{{e.occupation}}</td>
+       <td>{{e.pincode}}</td>
+       <td>{{e.city}}</td>
+       <td>{{e.state}}</td>
+       <td>{{e.country}}</td>
+       <td>{{e.dob}}</td>
+       <td>{{e.doj}}</td>
+           <td><input type ="button" value="Edit" (click)="editData(e.id)"></td>
+           <td><input type ="button" value="Delete" (click)="delData(e.id)"></td>
+        </tr>
+</table>
+</div>
+</div>

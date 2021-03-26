@@ -1,0 +1,45 @@
+<div class="box" fxLayoutAlign="space-between">
+    <div class="item">
+        Name       : <input type="text" name="name" placeholder="Enter the first name" [(ngModel)]="u.firstName">
+    </div>
+    <div class="item">
+        LastName   : <input type="text" name="surName" placeholder="Enter the surName" [(ngModel)]="u.surName"><br><br>
+    </div>
+    <div class="item">
+        Age        : <input type="text" name="age" placeholder="Enter the age" [(ngModel)]="u.age"><br><br>
+    </div>
+    <div class="item">
+        Email      : <input type="email" name="email" placeholder="Enter the email" [(ngModel)]="u.email"><br><br>
+    </div>
+</div>
+<br>
+<div class="box" fxLayoutAlign="space-between">
+    <div class="item">
+        Occupation : <input type="text" name="occupation" placeholder="Enter the occupation" [(ngModel)]="u.occupation"><br><br>
+    </div>
+    <div class="item">
+        Pincode    : <input type="text" name="pincode" placeholder="Enter the pincode" [(ngModel)]="u.pincode"><br><br>
+    </div>
+    <div class="item">
+        City       : <input type="text" name="city" placeholder="Enter the city" [(ngModel)]="u.city"><br><br>
+    </div>
+    <div class="item">
+        State      : <input type="text" name="state" placeholder="Enter the state" [(ngModel)]="u.state"><br><br>
+    </div>
+</div>
+<hr>
+<div class="box" fxLayoutAlign="space-between">
+    <div class="item">
+        Country    : <input type="text" name="country" placeholder="Enter the country" [(ngModel)]="u.country"><br><br>
+    </div>
+    <div class="item">
+        Dob        : <input type="date" name="dob" placeholder="Enter the dob" [(ngModel)]="u.dob"><br><br>
+    </div>
+    <div class="item">
+        Doj        : <input type="date" name="doj" placeholder="Enter the doj" [(ngModel)]="u.doj"><br><br>
+    </div>
+</div>
+<div class="item">
+    <input type="submit" value="Register" (click)="onReg()"><br><br>
+</div>
+   

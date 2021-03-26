@@ -1,0 +1,46 @@
+<p>valid-form works!</p>
+<div class="container">
+    <form [formGroup]="myForm">
+        value:{{myForm.value | json}} <br>
+        <mat-form-field>
+            <input matInput placeholder="email" formControlName="email" autocomplete="email">
+            <mat-error *ngIf="email.invalid && email.touched">
+                Your Email Doesnot Look Right
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="password" formControlName="password">
+            <mat-hint algin="end">Must have one letter, and one number</mat-hint>
+            <mat-error *ngIf="password.invalid">
+                Your password is incorrect
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="age" formControlName="age" [value]="0">
+            <mat-error *ngIf="age.errors.min && age.touched">
+                {{age.errors.min.actual}} is young to use this form.
+            </mat-error>
+            <mat-error *ngIf="age.errors.max && age.touched">
+                {{age.errors.max.actual}} you are too old to use this form.
+            </mat-error>
+        </mat-form-field>
+        <mat-checkbox formControlName="agree" color="primary">Are you sure?</mat-checkbox>
+        <div formArrayName="phones">
+            <div *ngFor="let phone of phoneForms.controls; let i=index">
+                <mat-form-field>
+                    <input matInput placeholder="area" formControlName="area">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="prefix" formControlName="prefix">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="line" formControlName="line">
+                </mat-form-field>
+            
+    <button mat-raised-button color="warn" (click)="deletePhone()">Delete</button>
+
+            </div>
+        </div>
+    <button mat-raised-button color="primary" (click)="addPhone()">Add Phone Number</button>
+    </form>
+</div>

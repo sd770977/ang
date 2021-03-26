@@ -1,0 +1,35 @@
+<p>fetch-userbydob works!</p>
+<table border = "5">
+    <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>LastName</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th>Occupation</th>
+    <th>pincode</th>
+    <th>city</th>
+    <th>state</th>
+    <th>country</th>
+    <th>dob</th>
+    <th>doj</th>
+    <th>EDIT</th>
+    <th>DELETE</th>
+    </tr>
+     <tr *ngFor = 'let e of users'>
+    <td>{{e.userId}}</td>
+    <td>{{e.firstName}}</td>
+    <td>{{e.surName}}</td>
+    <td>{{e.age}}</td>
+    <td>{{e.email}}</td>
+    <td>{{e.occupation}}</td>
+    <td>{{e.pincode}}</td>
+    <td>{{e.city}}</td>
+    <td>{{e.state}}</td>
+    <td>{{e.country}}</td>
+    <td>{{e.dob}}</td>
+    <td>{{e.doj}}</td>
+        <td><input type ="button" value="Edit" (click)="editData(e.id)"></td>
+        <td><input type ="button" value="Delete" (click)="delData(e.id)"></td>
+     </tr>
+</table>

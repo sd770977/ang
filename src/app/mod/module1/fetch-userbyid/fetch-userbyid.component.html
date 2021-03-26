@@ -1,0 +1,23 @@
+<table border = "5">
+            <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Mobile</th>
+            <th>UName</th>
+            <th>Pass</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
+            </tr>
+             <tr *ngFor = 'let e of users'>
+            <td>{{e.id}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.address}}</td>
+            <td>{{e.mob}}</td>
+            <td>{{e.uname}}</td>
+            <td>{{e.pass}}</td>
+                <td><input type ="button" value="Edit" (click)="editData(e.id)"></td>
+                <td><input type ="button" value="Delete" (click)="delData(e.id)"></td>
+             </tr>
+     </table>
+     
